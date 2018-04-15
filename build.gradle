@@ -20,6 +20,8 @@ apply plugin: 'com.dua3.gradle.jpms'
 	group              = 'org.json'
 	version            = '20180130-jpms'
 	
+	jar.baseName       = 'json'
+	
 	ext.moduleName     = project.group 
 	ext.scm            = 'https://github.com/xzel23/JSON-java.git'
 	ext.repo           = 'public'
