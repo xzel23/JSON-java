@@ -10,7 +10,7 @@ apply plugin: 'eclipse'
 
 /////////////////////////////////////////////////////////////////////////////
 	group              = 'org.json'
-	version            = '20180130-jpms'
+	version            = '20180130-jpms.1'
 	
 	jar.baseName       = 'json'
 	
