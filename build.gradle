@@ -1,20 +1,12 @@
-buildscript {
-  repositories {
-    maven { url  "https://dl.bintray.com/dua3/public" }
-  }  
-  dependencies {
-    classpath group: 'com.dua3.gradle.jpms', name: 'JpmsGradlePlugin', version: '0.2.3'
-  }
-}
-
 plugins {
-  id "com.jfrog.bintray" version "1.8.0"
+  id 'com.jfrog.bintray' version "1.8.0"
+  id 'com.dua3.gradle.jpms' version "0.3.1"
 }
 
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'java-library'
-apply plugin: 'com.dua3.gradle.jpms'
+apply plugin: 'eclipse'
 
 /////////////////////////////////////////////////////////////////////////////
 	group              = 'org.json'
@@ -42,6 +34,17 @@ dependencies {
 
 sourceCompatibility = 8
 targetCompatibility = 8
+
+moduleInfo {
+    multiRelease = false
+}
+
+// remove module-info.java from eclipse source folder
+eclipse.classpath.file.whenMerged {
+    for (item in entries.findAll{ it.path.matches('src/[^/]+/java') }) {
+    	item.excludes += 'module-info.java'
+    }
+}
 
 // === BINTRAY === >
 
