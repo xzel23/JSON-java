@@ -3,7 +3,7 @@ Modularized version of JSON-java (org.json)[ ![Download](https://api.bintray.com
 
 __Note:__ This fork just adds module definitions that make it possible to build standalone applications with jlink that use org.json. If you don't need modules or don't know about jlink, just use the [original version](https://github.com/stleary/JSON-java).
 
-If something doesn't work feel free to contact me or open an issue. Please make sure that you don't report issues caused by my packaging uostream. If in doubt, report here.
+If something doesn't work feel free to contact me or open an issue. Please make sure that you don't report issues caused by my packaging upstream. If in doubt, report here.
 
 # Binaries
 Binaries are available at https://bintray.com/dua3/public/org.json.
