@@ -1,5 +1,5 @@
-Modularized version of org.json[ ![Download](https://api.bintray.com/packages/dua3/public/org.json/images/download.svg) ](https://bintray.com/dua3/public/org.json/_latestVersion)
-===============================
+Modularized version of JSON-java (org.json)[ ![Download](https://api.bintray.com/packages/dua3/public/org.json/images/download.svg) ](https://bintray.com/dua3/public/org.json/_latestVersion)
+===========================================
 
 __Note:__ This fork just adds module definitions that make it possible to build standalone applications with jlink that use org.json. If you don't need modules or don't know about jlink, just use the [original version](https://github.com/stleary/JSON-java).
 
