@@ -22,7 +22,7 @@ Binaries are available at https://bintray.com/dua3/public/org.json.
 ```
 
 ## Maven dependency
-After you have added the bintary repository, you can pull the 
+After you have added the bintary repository, add: 
 ```
     <dependency>
         <groupId>org.json</groupId>
