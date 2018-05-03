@@ -9,7 +9,7 @@ If something doesn't work feel free to contact me or open an issue. Please make 
 Binaries are available at https://bintray.com/dua3/public/org.json.
 
 ##  Gradle dependency:
-```
+
     repositories {
         ...
         maven { url  "https://dl.bintray.com/dua3/public" }
@@ -19,25 +19,22 @@ Binaries are available at https://bintray.com/dua3/public/org.json.
         compile 'org.json:json:20180130-jpms.1'
         ...
     }
-```
 
 ## Maven dependency
 After you have added the bintary repository, add: 
-```
+
     <dependency>
         <groupId>org.json</groupId>
         <artifactId>json</artifactId>
         <version>20180130-jpms.1</version>
         <type>pom</type>
     </dependency>
-```
 
 # Module
 
 In `module-info.java` in the root  of your source tree:
-```
+
     requires org.json;
-```
 
 # Use the Module Path!
 
