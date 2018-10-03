@@ -105,6 +105,8 @@ invalid number formats (1.2e6.3) will cause errors as such documents can not be 
 Release history:
 
 ~~~
+20180813    POM change to include Automatic-Module-Name (#431)
+
 20180130    Recent commits
 
 20171018    Checkpoint for recent commits.
@@ -131,4 +133,4 @@ as of 29 July, 2015.
 
 JSON-java releases can be found by searching the Maven repository for groupId "org.json"
 and artifactId "json". For example:
-https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.json%22%20AND%20a%3A%22json%22
+https://search.maven.org/search?q=g:org.json%20AND%20a:json&core=gav
