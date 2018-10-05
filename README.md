@@ -1,39 +1,49 @@
-JSON in Java [package org.json]
-===============================
+Modularized version of JSON-java (org.json)[ ![Download](https://api.bintray.com/packages/dua3/public/org.json/images/download.svg) ](https://bintray.com/dua3/public/org.json/_latestVersion)
 
-[![Maven Central](https://img.shields.io/maven-central/v/org.json/json.svg)](https://mvnrepository.com/artifact/org.json/json)
+===========================================
 
-JSON is a light-weight, language independent, data interchange format.
-See http://www.JSON.org/
+__Note:__ This fork just adds module definitions that make it possible to build standalone applications with jlink that use org.json. If you don't need modules or don't know about jlink, just use the [original version](https://github.com/stleary/JSON-java).
 
-The files in this package implement JSON encoders/decoders in Java.
-It also includes the capability to convert between JSON and XML, HTTP
-headers, Cookies, and CDL.
+If something doesn't work feel free to contact me or open an issue. Please make sure that you don't report issues caused by my packaging upstream. If in doubt, report here.
 
-This is a reference implementation. There is a large number of JSON packages
-in Java. Perhaps someday the Java community will standardize on one. Until
-then, choose carefully.
+# Binaries
+Binaries are available at https://bintray.com/dua3/public/org.json.
 
-The license includes this restriction: "The software shall be used for good,
-not evil." If your conscience cannot live with that, then choose a different
-package.
+##  Gradle dependency:
 
-The package compiles on Java 1.6-1.8.
+    repositories {
+        ...
+        maven { url  "https://dl.bintray.com/dua3/public" }
+    }
+    
+    dependencies {
+        compile 'org.json:json:20180130-jpms.1'
+        ...
+    }
 
+## Maven dependency
+After you have added the bintary repository, add: 
 
-**JSONObject.java**: The `JSONObject` can parse text from a `String` or a `JSONTokener`
-to produce a map-like object. The object provides methods for manipulating its
-contents, and for producing a JSON compliant object serialization.
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20180130-jpms.1</version>
+        <type>pom</type>
+    </dependency>
 
-**JSONArray.java**: The `JSONArray` can parse text from a String or a `JSONTokener`
-to produce a vector-like object. The object provides methods for manipulating
-its contents, and for producing a JSON compliant array serialization.
+# Module
 
-**JSONTokener.java**: The `JSONTokener` breaks a text into a sequence of individual
-tokens. It can be constructed from a `String`, `Reader`, or `InputStream`.
+In `module-info.java` in the root  of your source tree:
 
-**JSONException.java**: The `JSONException` is the standard exception type thrown
-by this package.
+    requires org.json;
+
+# Use the Module Path!
+
+Don't forget that you have to add the Jar to the module path, not to the classpath!
+
+==========
+
+# Contents of Original README
 
 **JSONPointer.java**: Implementation of
 [JSON Pointer (RFC 6901)](https://tools.ietf.org/html/rfc6901). Supports
